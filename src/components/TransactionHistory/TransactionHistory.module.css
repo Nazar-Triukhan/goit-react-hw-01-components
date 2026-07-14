@@ -1,14 +1,33 @@
-th{
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: sans-serif;
+}
+
+.head {
     background-color: rgb(43, 174, 255);
 }
 
-tr:nth-child(1n){
+.headerRow {
+    background-color: rgb(43, 174, 255);
+}
+
+.headerCell {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.rowEven {
     background-color: #a3a3a3;
 }
-tr:nth-child(2n){
+
+.rowOdd {
     background-color: #e1e1e1;
 }
 
-td, th{
-    color: white;
+.cell {
+    padding: 10px;
+    color: #333;
 }

@@ -1,34 +1,29 @@
 import style from './TransactionHistory.module.css'
-function TransactionHistory ({transaction}) {
-    return (
-        <table >
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    {/* <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    */}
-    {transaction.map((e, i) => {
-        return (
-    <tr key={i}>
-      <td>{e.type}</td>
-      <td>{e.amount}</td>
-      <td>{e.currency}</td>
-    </tr>
-        )
-    })}
-  </tbody>
-</table>
-    )
+function TransactionHistory({ transaction }) {
+  return (
+    <table className={style.table}>
+      <thead className={style.head}>
+        <tr className={style.headerRow}>
+          <th className={style.headerCell}>Type</th>
+          <th className={style.headerCell}>Amount</th>
+          <th className={style.headerCell}>Currency</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {transaction.map((e, i) => {
+          return (
+            <tr key={i} className={i % 2 === 0 ? style.rowEven : style.rowOdd}>
+              <td className={style.cell}>{e.type}</td>
+              <td className={style.cell}>{e.amount}</td>
+              <td className={style.cell}>{e.currency}</td>
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
+  )
 }
 
 export default TransactionHistory
