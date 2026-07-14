@@ -1,3 +1,4 @@
+import style from './TransactionHistory.module.css'
 function TransactionHistory ({transaction}) {
     return (
         <table >
@@ -18,7 +19,7 @@ function TransactionHistory ({transaction}) {
     */}
     {transaction.map((e, i) => {
         return (
- <tr key={i}>
+    <tr key={i}>
       <td>{e.type}</td>
       <td>{e.amount}</td>
       <td>{e.currency}</td>

@@ -1,11 +1,11 @@
-import './friends.css'
+import style from'./friendList.module.css'
 function FriendList ({friends}) {
     return (
-        <ul >
+        <ul className={style.list}>
   {friends.map(e => {
     return (
-        <li key={e.id}>
-  <span className={e.isOnline?'true':'false'}></span>
+        <li className={style.item} key={e.id}>
+  <span className={e.isOnline? `${style.true}`:`${style.false}`}></span>
   <img  src={e.avatar} alt="User avatar" width="48" />
   <p >{e.name}</p>
 </li>

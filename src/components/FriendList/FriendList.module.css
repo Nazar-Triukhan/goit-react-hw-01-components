@@ -12,3 +12,14 @@
   background-color: red;
   border-radius: 50%;
 }
+
+.list{
+    list-style: none;
+}
+
+.item{
+    width: 200px;
+    display: flex;
+    border: 1px solid rgb(61, 61, 61);
+    box-shadow: black;
+}
